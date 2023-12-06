@@ -69,7 +69,7 @@
             // 
             // buttonCalc
             // 
-            this.buttonCalc.BackColor = System.Drawing.Color.DarkMagenta;
+            this.buttonCalc.BackColor = System.Drawing.Color.Transparent;
             this.buttonCalc.Location = new System.Drawing.Point(350, 385);
             this.buttonCalc.Name = "buttonCalc";
             this.buttonCalc.Size = new System.Drawing.Size(121, 32);
@@ -139,7 +139,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Aqua;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Location = new System.Drawing.Point(510, 385);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 32);
