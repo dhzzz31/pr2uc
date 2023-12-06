@@ -207,7 +207,8 @@
             this.Controls.Add(this.buttonCalc);
             this.Controls.Add(this.chart1);
             this.Name = "Form2";
-            this.Text = "Form3";
+            this.Text = "v = (1 + sin^2 (x + y))/|x - (2y)/(1 + x ^ 2 * y ^ 2)| * x ^ |y| + cos^2 (arclg *" +
+    " 1/z)";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
