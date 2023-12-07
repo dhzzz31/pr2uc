@@ -19,16 +19,19 @@ namespace WindowsFormsApp1
 
         private void buttonCalc_Click(object sender, EventArgs e)
         {
-            // считываем с формы требуемые значени
+            // считываем с формы требуемые значени 
+            // Перед началом работы, мы считываем значения, введенные пользователем в текстовые поля
             double y1 = double.Parse(txt_y.Text);
             double z1 = double.Parse(txt_z.Text);
             double min = double.Parse(Xmin.Text);
             double max = double.Parse(Xmax.Text);
             double St = double.Parse(Step.Text);
             // количество точек графика
+            //Затем мы определяем количество точек графика, которые будут распределены равномерно между минимальным и максимальным значением оси X, с указанным шагом Step
+            //Для этого используется метод Ceiling класса Math для округления до ближайшего целого числа и увеличение на 1,
             int count = (int)Math.Ceiling((max - min) / St)
                 + 1;
-            // массив значений x y
+            // массив значений x y общий для обеих графиков
             double[] X = new double[count];
             double[] y = new double[count];
             // расчитываем точки для графиков функции
@@ -37,7 +40,8 @@ namespace WindowsFormsApp1
                 // вычисляем значение
                 X[i] = min + St * i;
                 // вычисляем значение функций в точке y
-                y[i] = (1 + Math.Pow(Math.Sin(X[i] + y1), 2)) / Math.Abs(X[i] - (2 * y1) / (1 + Math.Pow(X[i], 2) * Math.Pow(y1, 2))) * Math.Pow(X[i], Math.Abs(y1)) + Math.Pow(Math.Cos(Math.Asin(1 / z1)), 2);
+                y[i] = (1 + Math.Pow(Math.Sin(X[i] + y1), 2)) / Math.Abs(X[i] - (2 * y1) / (1 + Math.Pow(X[i], 2) * Math.Pow(y1, 2)))
+            * Math.Pow(X[i], Math.Abs(y1)) + Math.Pow(Math.Cos(Math.Atan(1 / z1)), 2);
             }
             // настраиваем оси графика
             chart1.ChartAreas[0].AxisX.Minimum = min;

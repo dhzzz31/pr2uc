@@ -20,6 +20,7 @@ namespace WindowsFormsApp1
         private void buttonCalc_Click(object sender, EventArgs e)
         {
             // считываем с формы требуемые значени
+            //Перед началом работы, мы считываем значения, введенные пользователем в текстовые поля
             double a = double.Parse(txt_a.Text);
             double b = double.Parse(txt_b.Text);
             double c = double.Parse(txt_c.Text);
@@ -27,6 +28,8 @@ namespace WindowsFormsApp1
             double max = double.Parse(Xmax.Text);
             double St = double.Parse(Step.Text);
             // количество точек графика
+            //Затем мы определяем количество точек графика, которые будут распределены равномерно между минимальным и максимальным значением оси X, с указанным шагом Step
+            //Для этого используется метод Ceiling класса Math для округления до ближайшего целого числа и увеличение на 1,
             int count = (int)Math.Ceiling((max - min) / St)
                 + 1;
             // массив значений X - общий для обоих графиков

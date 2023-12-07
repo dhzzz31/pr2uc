@@ -74,7 +74,7 @@
             this.buttonCalc.Name = "buttonCalc";
             this.buttonCalc.Size = new System.Drawing.Size(121, 32);
             this.buttonCalc.TabIndex = 1;
-            this.buttonCalc.Text = "вычисли";
+            this.buttonCalc.Text = "Создать график";
             this.buttonCalc.UseVisualStyleBackColor = false;
             this.buttonCalc.Click += new System.EventHandler(this.buttonCalc_Click);
             // 
@@ -140,7 +140,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(510, 385);
+            this.button1.Location = new System.Drawing.Point(511, 385);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 32);
             this.button1.TabIndex = 14;
